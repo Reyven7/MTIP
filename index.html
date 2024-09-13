@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="column1">
+            <h1 style="text-align: center;">Навігація</h1>
+            <nav class="navBlock">
+                <li><a href="#" onclick="openLab(1)">Лабораторна №1</a></li>
+                <li><a href="#" onclick="openLab(2)">Лабораторна №2</a></li>
+                <li><a href="#" onclick="openLab(3)">Лабораторна №3</a></li>
+                <li><a href="">лабораторна №4</a></li>
+                <li><a href="">лабораторна №5</a></li>
+                <li><a href="">лабораторна №6</a></li>
+                <li><a href="">лабораторна №7</a></li>
+                <li><a href="">лабораторна №8</a></li>
+                <li><a href="">лабораторна №9</a></li>
+                <li><a href="">лабораторна №10</a></li>
+            </nav>
+        </div>
+        <div class="column2">
+            <header>
+                <div class="headerText">
+                    <h1>Звіт</h1>
+                    <h2>про лабораторні роботи з курсу</h2>
+                    <h2>«Сучасні технології Інтернет-програмування» </h2>
+                    <h2>студента групи ІПЗ-22-1</h2>
+                    <h2>Ярошенко Віталія Олеговича</h2>
+                </div>
+                <div class="mainBlock">
+                    <div class="buttonСolumn">
+                        <input type="button" id="conditionBtn" value="Умова" onclick="showContent('condition')" />
+                        <input type="button" id="resultBtn" value="Посилання на готовий результат"
+                            onclick="showContent('result')" />
+                        <input type="button" id="codeBtn" value="Посилання на код" onclick="showContent('code')" />
+                    </div>
+
+                    <div id="contentDisplay" style="margin-top: 20px;"></div>
+                </div>
+            </header>
+        </div>
+    </div>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script src="/JS/script.js"></script>
+
+</html>
