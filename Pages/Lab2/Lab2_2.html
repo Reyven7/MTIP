@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2_2</title>
+</head>
+<style>
+    #imageContainer {
+        width: 400px;
+        height: 300px;
+    }
+
+    #imageContainer img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+</style>
+
+<body>
+    <div id="imageContainer">
+        <img id="slideshowImage" src="/img/Image1.jpg" alt="Slideshow Image">
+    </div>
+</body>
+<script>
+    let imageIndex = 0;
+    const images = [
+        '/img/Image1.jpg',
+        '/img/Image2.jpg',
+        '/img/Image3.jpg',
+        '/img/Image4.jpg'
+    ];
+
+    function changeImage()
+    {
+        const imgElement = document.getElementById('slideshowImage');
+        imgElement.src = images[imageIndex];
+        imageIndex = (imageIndex + 1) % images.length;
+    }
+
+    function startSlideshow()
+    {
+        setInterval(changeImage, 3000);
+    }
+
+    window.onload = startSlideshow;
+</script>
+
+</html>

@@ -2,6 +2,13 @@ let currentLab = 1;
 
 function openLab(labNumber) {
   currentLab = labNumber;
+  document.querySelectorAll(".navBlock a").forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  document.getElementById(`lab${labNumber}`).classList.add("active");
+
+  showContent("condition");
 }
 
 function showContent(type) {
@@ -31,11 +38,34 @@ function showContent(type) {
       break;
     case 2:
       if (type === "condition") {
-        content = "<p>Умова для лабораторної №2: ...</p>";
+        content =
+          '<iframe src="Сonditions/Лабораторна робота 2.pdf" width="100%" height="600px"></iframe>';
       } else if (type === "result") {
-        content = '<a href="">Готовий результат для лабораторної №2</a>';
+        content = `
+          <a href="Pages/Lab2/Lab2_1.html" target= "_blank">Завдання 1</a><br>
+          <a href="Pages/Lab2/Lab2_2.html" target= "_blank">Завдання 2</a>
+        `;
       } else if (type === "code") {
-        content = '<a href="">Код лабораторної №2</a>';
+        Promise.all([
+          fetch("JS/Lab2_1_script.js").then((response) => response.text()),
+          fetch("Pages/Lab2/Lab2_2.html").then((response) => response.text()),
+        ])
+          .then(([code1, code2]) => {
+            content = `
+            <h3>Код з Lab2_1_script.js:</h3>
+            <pre><code class="language-javascript">${escapeHtml(
+              code1
+            )}</code></pre>
+            <h3>Код з Lab2_2.html:</h3>
+            <pre><code class="language-html">${escapeHtml(code2)}</code></pre>`;
+            contentDisplay.innerHTML = content;
+            document.querySelectorAll("pre code").forEach((block) => {
+              hljs.highlightElement(block);
+            });
+          })
+          .catch((error) => {
+            console.error("Помилка завантаження файлів:", error);
+          });
       }
       break;
     case 3:
