@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#puzzle-area {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  position: relative;
+  margin: 20px auto;
+}
+
+.piece {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #000;
+  background-color: #f0f0f0;
+  position: absolute;
+  text-align: center;
+  line-height: 90px;
+  cursor: pointer;
+}
+
+.piece[data-pos="0"] {
+  top: 0;
+  left: 0;
+}
+.piece[data-pos="1"] {
+  top: 0;
+  left: 100px;
+}
+.piece[data-pos="2"] {
+  top: 100px;
+  left: 0;
+}
+.piece[data-pos="3"] {
+  top: 100px;
+  left: 100px;
+}
