@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="/JS/Lab4_script.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="column">
+            <div class="headerText">
+                <h1>Форма для реєстрації</h1>
+                <h2>Перевірка введених даних</h2>
+            </div>
+
+            <div class="mainBlock">
+                <form id="registrationForm">
+                    <label for="firstName">Ім'я:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <p class="hint" id="firstNameHint"></p><br>
+
+                    <label for="lastName">Прізвище:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <p class="hint" id="lastNameHint"></p><br>
+
+                    <label for="organization">Найменування організації:</label>
+                    <input type="text" id="organization" name="organization" required><br><br>
+
+                    <label for="creditCard">Номер кредитної картки:</label>
+                    <input type="text" id="creditCard" name="creditCard" required>
+                    <p class="hint" id="creditCardHint"></p><br>
+
+                    <label for="phone">Номер телефону:</label>
+                    <input type="text" id="phone" name="phone" required>
+                    <p class="hint" id="phoneHint"></p><br>
+
+                    <label for="email">Адреса електронної пошти:</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="hint" id="emailHint"></p><br>
+
+                    <div class="buttonСolumn">
+                        <input type="submit" value="Надіслати">
+                        <input type="reset" value="Очистити">
+                    </div>
+                </form>
+
+                <p id="errorMessage" style="color: red;"></p>
+            </div>
+
+            <div class="mainBlock" style="margin-top: 20px;">
+                <h2>Перевірка рядка на відповідність регулярному виразу (Завдання №21)</h2>
+                <label for="inputString">Введіть рядок:</label>
+                <input type="text" id="inputString">
+                <button id="checkButton">Перевірити</button>
+
+                <p>Знайдені рядки: <span id="result"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
