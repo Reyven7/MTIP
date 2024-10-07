@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Завдання</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="mainContainer">
+        <div class="column">
+            <div class="headerText">
+                <h1 class="clickable-header">Заголовок</h1>
+                <h1 class="clickable-header">Заголовок 1</h1>
+                <h1 class="clickable-header">Заголовок 2</h1>
+                <h1 class="clickable-header">Заголовок 3</h1>
+                <h1 class="clickable-header">Заголовок 4</h1>
+            </div>
+            
+            <div class="mainBlock">
+                <button id="startAnimation" class="buttonColumn">Запустити анімацію</button>
+                
+                <form>
+                    <label>
+                        <input type="checkbox" id="addKeywordCheckbox"> Додати ключове слово
+                    </label>
+                    <div id="keywordField" style="display: none;">
+                        <label>Ключове слово: <input type="text" id="keywordInput"></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="movingBlock">Block</div>
+    
+    
+</body>
+<script src="/JS/Lab5_script.js"></script>
+</html>

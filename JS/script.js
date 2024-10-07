@@ -110,6 +110,27 @@ function showContent(type) {
           });
       }
       break;
+      case 5:
+      if (type === "condition") {
+        content =
+          '<iframe src="Сonditions/Лабораторна робота 5.pdf" width="100%" height="600px"></iframe>';
+      } else if (type === "result") {
+        content =
+          '<a href="Pages/Lab5/Lab5.html" target= "_blank">Готовий результат для лабораторної №5</a>';
+      } else if (type === "code") {
+        fetch("JS/Lab5_script.js")
+          .then((response) => response.text())
+          .then((code) => {
+            content = `<pre><code class="language-javascript">${escapeHtml(
+              code
+            )}</code></pre>`;
+            contentDisplay.innerHTML = content;
+            document.querySelectorAll("pre code").forEach((block) => {
+              hljs.highlightElement(block);
+            });
+          });
+      }
+      break;
   }
   contentDisplay.innerHTML = content;
 }
