@@ -131,6 +131,27 @@ function showContent(type) {
           });
       }
       break;
+      case 6:
+        if (type === "condition") {
+          content =
+            '<iframe src="Сonditions/Лабораторна робота 6.pdf" width="100%" height="600px"></iframe>';
+        } else if (type === "result") {
+          content =
+            '<a href="Pages/Lab6/Lab6.html" target= "_blank">Готовий результат для лабораторної №6</a>';
+        } else if (type === "code") {
+          fetch("JS/Lab6_script.js")
+            .then((response) => response.text())
+            .then((code) => {
+              content = `<pre><code class="language-javascript">${escapeHtml(
+                code
+              )}</code></pre>`;
+              contentDisplay.innerHTML = content;
+              document.querySelectorAll("pre code").forEach((block) => {
+                hljs.highlightElement(block);
+              });
+            });
+        }
+        break;
   }
   contentDisplay.innerHTML = content;
 }
