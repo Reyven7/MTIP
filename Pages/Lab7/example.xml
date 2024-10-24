@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cookbook version="1.0">
+    <dish>
+        <type>Салат</type>
+        <name>Грецький салат</name>
+        <ingredient>
+            <name>Помідори</name>
+            <amount>3</amount>
+            <measure>штуки</measure>
+        </ingredient>
+        <ingredient>
+            <name>Огірки</name>
+            <amount>2</amount>
+            <measure>штуки</measure>
+        </ingredient>
+        <ingredient>
+            <name>Сир фета</name>
+            <amount>150</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <calories>150</calories>
+        <recipe>Нарізати всі інгредієнти та змішати.</recipe>
+    </dish>
+    
+    <dish>
+        <type>Гарнір</type>
+        <name>Картопля фрі</name>
+        <ingredient>
+            <name>Картопля</name>
+            <amount>500</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <ingredient>
+            <name>Олія</name>
+            <amount>200</amount>
+            <measure>мл</measure>
+        </ingredient>
+        <calories>300</calories>
+        <recipe>Нарізати картоплю та смажити до готовності.</recipe>
+    </dish>
+
+    <dish>
+        <type>Десерт</type>
+        <name>Яблучний пиріг</name>
+        <ingredient>
+            <name>Яблука</name>
+            <amount>4</amount>
+            <measure>штуки</measure>
+        </ingredient>
+        <ingredient>
+            <name>Борошно</name>
+            <amount>200</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <ingredient>
+            <name>Цукор</name>
+            <amount>100</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <calories>400</calories>
+        <recipe>Приготувати тісто і запекти з яблуками.</recipe>
+    </dish>
+
+    <dish>
+        <type>Основна страва</type>
+        <name>Курка-гриль</name>
+        <ingredient>
+            <name>Курка</name>
+            <amount>1</amount>
+            <measure>штука</measure>
+        </ingredient>
+        <ingredient>
+            <name>Часник</name>
+            <amount>3</amount>
+            <measure>зубчики</measure>
+        </ingredient>
+        <calories>800</calories>
+        <recipe>Запекти курку в духовці з часником.</recipe>
+    </dish>
+
+    <dish>
+        <type>Суп</type>
+        <name>Борщ</name>
+        <ingredient>
+            <name>Буряк</name>
+            <amount>2</amount>
+            <measure>штуки</measure>
+        </ingredient>
+        <ingredient>
+            <name>Картопля</name>
+            <amount>3</amount>
+            <measure>штуки</measure>
+        </ingredient>
+        <calories>250</calories>
+        <recipe>Зварити всі овочі та додати спеції.</recipe>
+    </dish>
+
+    <dish>
+        <type>Гарнір</type>
+        <name>Рис з овочами</name>
+        <ingredient>
+            <name>Рис</name>
+            <amount>200</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <ingredient>
+            <name>Морква</name>
+            <amount>1</amount>
+            <measure>штука</measure>
+        </ingredient>
+        <calories>180</calories>
+        <recipe>Варити рис з нарізаною морквою.</recipe>
+    </dish>
+
+    <dish>
+        <type>Салат</type>
+        <name>Цезар</name>
+        <ingredient>
+            <name>Куряче філе</name>
+            <amount>200</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <ingredient>
+            <name>Сир пармезан</name>
+            <amount>50</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <calories>320</calories>
+        <recipe>Змішати всі інгредієнти та додати соус.</recipe>
+    </dish>
+
+    <dish>
+        <type>Десерт</type>
+        <name>Шоколадний торт</name>
+        <ingredient>
+            <name>Шоколад</name>
+            <amount>200</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <ingredient>
+            <name>Борошно</name>
+            <amount>150</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <calories>500</calories>
+        <recipe>Змішати всі інгредієнти та випікати.</recipe>
+    </dish>
+
+    <dish>
+        <type>Основна страва</type>
+        <name>Свинина в соусі</name>
+        <ingredient>
+            <name>Свинина</name>
+            <amount>300</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <ingredient>
+            <name>Соєвий соус</name>
+            <amount>50</amount>
+            <measure>мл</measure>
+        </ingredient>
+        <calories>600</calories>
+        <recipe>Смажити свинину з соусом на сковороді.</recipe>
+    </dish>
+
+    <dish>
+        <type>Суп</type>
+        <name>Солянка</name>
+        <ingredient>
+            <name>Ковбаса</name>
+            <amount>150</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <ingredient>
+            <name>Оливки</name>
+            <amount>50</amount>
+            <measure>грам</measure>
+        </ingredient>
+        <calories>400</calories>
+        <recipe>Зварити всі інгредієнти та додати спеції.</recipe>
+    </dish>
+</cookbook>

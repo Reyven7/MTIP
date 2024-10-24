@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lab7</title>
+</head>
+
+<body>
+  <div class="mainContainer">
+    <div class="imageRow">
+      <div>
+        <img src="/img/static_model.png" alt="Статична модель">
+        <h3>Статична модель</h3>
+      </div>
+      <div>
+        <img src="/img/dynamic_model.png" alt="Динамічна модель">
+        <h3>Динамічна модель</h3>
+      </div>
+    </div>
+
+    <div class="buttonContainer">
+      <input type="file" id="fileInput" accept=".xml" style="display: none;">
+      <button onclick="document.getElementById('fileInput').click()">Вибрати XML</button>
+    </div>
+
+    <div class="tableContainer">
+      <table id="xmlTable">
+        <thead>
+          <tr>
+            <th>Назва страви</th>
+            <th>Тип страви</th>
+            <th>Калорії</th>
+            <th>Інгредієнти</th>
+            <th>Рецепт</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<Script src="/JS/Lab7_script.js"></Script>
+
+</html>
