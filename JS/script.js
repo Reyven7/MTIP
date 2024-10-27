@@ -213,6 +213,42 @@ function showContent(type)
           });
       }
       break;
+    case 8:
+      if (type === "condition")
+      {
+        content =
+          '<iframe src="Сonditions/Лабораторна робота 8.pdf" width="100%" height="600px"></iframe>';
+      } else if (type === "result")
+      {
+        content =
+          '<p>Перегляньте код</p>';
+      } else if (type === "code")
+      {
+        Promise.all([
+          fetch("Pages/Lab8/cookbook.dtd").then((response) => response.text()),
+          fetch("Pages/Lab8/cookbook.xsd").then((response) => response.text()),
+        ])
+          .then(([code1, code2]) =>
+          {
+            content = `
+                <h3>DTD-схема:</h3>
+                <pre><code class="language-xml">${escapeHtml(
+              code1
+            )}</code></pre>
+                <h3>XML-схема:</h3>
+                <pre><code class="language-xsd">${escapeHtml(code2)}</code></pre>`;
+            contentDisplay.innerHTML = content;
+            document.querySelectorAll("pre code").forEach((block) =>
+            {
+              hljs.highlightElement(block);
+            });
+          })
+          .catch((error) =>
+          {
+            console.error("Помилка завантаження файлів:", error);
+          });
+      }
+      break;
   }
   contentDisplay.innerHTML = content;
 }
