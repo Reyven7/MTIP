@@ -1,0 +1,24 @@
+<!DOCTYPE cookbook [
+  <!ELEMENT cookbook (dish+)>
+  <!ATTLIST cookbook
+    version CDATA #REQUIRED>
+
+  <!ELEMENT dish (type, name, ingredient+, calories, recipe)>
+  
+  <!ELEMENT type (#PCDATA)>
+  <!ELEMENT name (#PCDATA)>
+  
+  <!ELEMENT ingredient (name, amount, measure)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT amount (#PCDATA)>
+  <!ELEMENT measure (#PCDATA)>
+  
+  <!ELEMENT calories (#PCDATA)>
+  <!ELEMENT recipe (#PCDATA)>
+  
+  <!ATTLIST dish
+    id ID #IMPLIED>
+  
+  <!ATTLIST ingredient
+    optional CDATA #IMPLIED>
+]>
