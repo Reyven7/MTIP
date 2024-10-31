@@ -249,6 +249,42 @@ function showContent(type)
           });
       }
       break;
+    case 9:
+      if (type === "condition")
+      {
+        content =
+          '<iframe src="Сonditions/Лабораторна робота 9.pdf" width="100%" height="600px"></iframe>';
+      } else if (type === "result")
+      {
+        content =
+          '<a href="Pages/Lab9/cookbook.xml" target= "_blank">Готовий результат для лабораторної №9</a>';
+      } else if (type === "code")
+      {
+        Promise.all([
+          fetch("Pages/Lab9/cookbook.xml").then((response) => response.text()),
+          fetch("Pages/Lab9/cookbook.xsl").then((response) => response.text()),
+        ])
+          .then(([code1, code2]) =>
+          {
+            content = `
+                <h3>Дані:</h3>
+                <pre><code class="language-xml">${escapeHtml(
+              code1
+            )}</code></pre>
+                <h3>XSL-шаблон:</h3>
+                <pre><code class="language-xsd">${escapeHtml(code2)}</code></pre>`;
+            contentDisplay.innerHTML = content;
+            document.querySelectorAll("pre code").forEach((block) =>
+            {
+              hljs.highlightElement(block);
+            });
+          })
+          .catch((error) =>
+          {
+            console.error("Помилка завантаження файлів:", error);
+          });
+      }
+      break;
   }
   contentDisplay.innerHTML = content;
 }
